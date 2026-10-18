@@ -121,7 +121,7 @@ async function main() {
       let hint = "";
       if (e.status === 404) hint = " Fix: open the class page in Notion, ••• menu, Connections, add Class Launchpad.";
       if (e.status === 401) hint = " Fix: the NOTION_TOKEN secret is wrong or was revoked. Copy the token again and replace the secret.";
-      fail(`${cls.code}: ${e.message}.${hint}`);
+      fail(`${cls.code}: ${e.message.replace(/\.+$/, "")}.${hint}`);
     }
   }
   await writeFile(path.join(OUT_DIR, "classes.json"), JSON.stringify({ classes: index }, null, 1));
