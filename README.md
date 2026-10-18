@@ -17,7 +17,7 @@ One page for the current class: the next step's imprint warmup and a Start butto
 
 ## Privacy
 
-The repo is private. The published page is still reachable by anyone who has its link (GitHub only restricts Pages access on Enterprise plans), so it shows class steps and warmups only, never keys.
+The repo starts public and moves to private once GitHub Pro is active (Student Developer Pack). Either way the published page is reachable by anyone who has its link (GitHub only restricts Pages access on Enterprise plans), so it shows class steps and warmups only, never keys. Synced progress is published straight to Pages and never committed, so the repo holds code only.
 
 ## Tests
 
