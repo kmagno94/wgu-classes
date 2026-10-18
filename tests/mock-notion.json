@@ -1,0 +1,1909 @@
+{
+ "object": "list",
+ "results": [
+  {
+   "object": "page",
+   "id": "3fa098dedfdb81d28f79cc248b4280ff",
+   "properties": {
+    "Step": {
+     "type": "title",
+     "title": [
+      {
+       "type": "text",
+       "plain_text": "Task 2 submitted",
+       "text": {
+        "content": "Task 2 submitted"
+       }
+      }
+     ]
+    },
+    "Order": {
+     "type": "number",
+     "number": 22
+    },
+    "Reviewed": {
+     "type": "checkbox",
+     "checkbox": false
+    },
+    "Submission": {
+     "type": "relation",
+     "relation": [
+      {
+       "id": "3fa098de-dfdb-815e-aa43-dba049eae921"
+      }
+     ]
+    },
+    "Due": {
+     "type": "date",
+     "date": {
+      "start": "2026-11-01"
+     }
+    },
+    "Date Completed": {
+     "type": "date",
+     "date": null
+    },
+    "Warmup": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "Read each Competent line on the Task 2 page once more against your screenshots, log file and commits. Then submit.",
+       "text": {
+        "content": "Read each Competent line on the Task 2 page once more against your screenshots, log file and commits. Then submit."
+       }
+      }
+     ]
+    },
+    "Check": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "Should the submitted URL point at main or at your working branch?",
+       "text": {
+        "content": "Should the submitted URL point at main or at your working branch?"
+       }
+      }
+     ]
+    },
+    "Answer": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "Your Task 2 working branch.",
+       "text": {
+        "content": "Your Task 2 working branch."
+       }
+      }
+     ]
+    },
+    "Go To": {
+     "type": "url",
+     "url": "https://app.notion.com/p/3f9098dedfdb8168b513c697cde6c220"
+    },
+    "Also Open": {
+     "type": "url",
+     "url": "https://my.wgu.edu/courses/course/41600022"
+    }
+   }
+  },
+  {
+   "object": "page",
+   "id": "3fa098dedfdb81f28a6af8569c731f87",
+   "properties": {
+    "Step": {
+     "type": "title",
+     "title": [
+      {
+       "type": "text",
+       "plain_text": "Task 2 deliverables assembled and checked",
+       "text": {
+        "content": "Task 2 deliverables assembled and checked"
+       }
+      }
+     ]
+    },
+    "Order": {
+     "type": "number",
+     "number": 21
+    },
+    "Reviewed": {
+     "type": "checkbox",
+     "checkbox": false
+    },
+    "Submission": {
+     "type": "relation",
+     "relation": [
+      {
+       "id": "3fa098de-dfdb-815e-aa43-dba049eae921"
+      }
+     ]
+    },
+    "Due": {
+     "type": "date",
+     "date": null
+    },
+    "Date Completed": {
+     "type": "date",
+     "date": null
+    },
+    "Warmup": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "Task 2 needs the branch URL, the commit history PDF, a ZIP that includes the screenshots, the C5 log file, and one file with 7 screenshots.",
+       "text": {
+        "content": "Task 2 needs the branch URL, the commit history PDF, a ZIP that includes the screenshots, the C5 log file, and one file with 7 screenshots."
+       }
+      }
+     ]
+    },
+    "Check": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "Which deliverable does Task 2 have that Task 1 did not?",
+       "text": {
+        "content": "Which deliverable does Task 2 have that Task 1 did not?"
+       }
+      }
+     ]
+    },
+    "Answer": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "The C5 log file.",
+       "text": {
+        "content": "The C5 log file."
+       }
+      }
+     ]
+    },
+    "Go To": {
+     "type": "url",
+     "url": "https://app.notion.com/p/3f9098dedfdb8168b513c697cde6c220"
+    },
+    "Also Open": {
+     "type": "url",
+     "url": "https://lrps.wgu.edu/provision/565781881"
+    }
+   }
+  },
+  {
+   "object": "page",
+   "id": "3fa098dedfdb816aaa70edadead2f645",
+   "properties": {
+    "Step": {
+     "type": "title",
+     "title": [
+      {
+       "type": "text",
+       "plain_text": "Tested: a PC turned off and a PC's DNS changed",
+       "text": {
+        "content": "Tested: a PC turned off and a PC's DNS changed"
+       }
+      }
+     ]
+    },
+    "Order": {
+     "type": "number",
+     "number": 20
+    },
+    "Reviewed": {
+     "type": "checkbox",
+     "checkbox": false
+    },
+    "Submission": {
+     "type": "relation",
+     "relation": [
+      {
+       "id": "3fa098de-dfdb-815e-aa43-dba049eae921"
+      }
+     ]
+    },
+    "Due": {
+     "type": "date",
+     "date": null
+    },
+    "Date Completed": {
+     "type": "date",
+     "date": null
+    },
+    "Warmup": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "Start the monitor. Turn a PC off in GNS3 and C2 and C3 should fire. Turn it back on, then change a PC's DNS from its console and C4 and C5 should fire. Take each screenshot as it happens.",
+       "text": {
+        "content": "Start the monitor. Turn a PC off in GNS3 and C2 and C3 should fire. Turn it back on, then change a PC's DNS from its console and C4 and C5 should fire. Take each screenshot as it happens."
+       }
+      }
+     ]
+    },
+    "Check": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "Why test on the PCs?",
+       "text": {
+        "content": "Why test on the PCs?"
+       }
+      }
+     ]
+    },
+    "Answer": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "Nothing else in the network depends on them.",
+       "text": {
+        "content": "Nothing else in the network depends on them."
+       }
+      }
+     ]
+    },
+    "Go To": {
+     "type": "url",
+     "url": "https://lrps.wgu.edu/provision/565781881"
+    },
+    "Also Open": {
+     "type": "url",
+     "url": "https://app.notion.com/p/3f9098dedfdb8168b513c697cde6c220"
+    }
+   }
+  },
+  {
+   "object": "page",
+   "id": "3fa098dedfdb81cbb468dac9189fe0d6",
+   "properties": {
+    "Step": {
+     "type": "title",
+     "title": [
+      {
+       "type": "text",
+       "plain_text": "C5: log of healthy checks",
+       "text": {
+        "content": "C5: log of healthy checks"
+       }
+      }
+     ]
+    },
+    "Order": {
+     "type": "number",
+     "number": 19
+    },
+    "Reviewed": {
+     "type": "checkbox",
+     "checkbox": false
+    },
+    "Submission": {
+     "type": "relation",
+     "relation": [
+      {
+       "id": "3fa098de-dfdb-815e-aa43-dba049eae921"
+      }
+     ]
+    },
+    "Due": {
+     "type": "date",
+     "date": null
+    },
+    "Date Completed": {
+     "type": "date",
+     "date": null
+    },
+    "Warmup": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "Open the log file with mode \"a\" so each round adds lines instead of overwriting. datetime.now().strftime(...) gives the date and time. Log every healthy device on every round, which is why the sleep between rounds matters.",
+       "text": {
+        "content": "Open the log file with mode \"a\" so each round adds lines instead of overwriting. datetime.now().strftime(...) gives the date and time. Log every healthy device on every round, which is why the sleep between rounds matters."
+       }
+      }
+     ]
+    },
+    "Check": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "Which three fields must every log entry have?",
+       "text": {
+        "content": "Which three fields must every log entry have?"
+       }
+      }
+     ]
+    },
+    "Answer": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "Device name, date and time.",
+       "text": {
+        "content": "Device name, date and time."
+       }
+      }
+     ]
+    },
+    "Go To": {
+     "type": "url",
+     "url": "https://lrps.wgu.edu/provision/565781881"
+    },
+    "Also Open": {
+     "type": "url",
+     "url": "https://app.notion.com/p/3f9098dedfdb8168b513c697cde6c220"
+    }
+   }
+  },
+  {
+   "object": "page",
+   "id": "3fa098dedfdb81b3815cc6b02d4c267f",
+   "properties": {
+    "Step": {
+     "type": "title",
+     "title": [
+      {
+       "type": "text",
+       "plain_text": "C4: DNS altered email, fix, ticket update",
+       "text": {
+        "content": "C4: DNS altered email, fix, ticket update"
+       }
+      }
+     ]
+    },
+    "Order": {
+     "type": "number",
+     "number": 18
+    },
+    "Reviewed": {
+     "type": "checkbox",
+     "checkbox": false
+    },
+    "Submission": {
+     "type": "relation",
+     "relation": [
+      {
+       "id": "3fa098de-dfdb-815e-aa43-dba049eae921"
+      }
+     ]
+    },
+    "Due": {
+     "type": "date",
+     "date": null
+    },
+    "Date Completed": {
+     "type": "date",
+     "date": null
+    },
+    "Warmup": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "Order matters. Detect the wrong DNS, email with the DNS Setting Altered template (detected setting against expected setting), fix the device with your Task 1 D4 code, then update a ticket. Updating uses a different HTTP method than creating; check the API docs page for which one.",
+       "text": {
+        "content": "Order matters. Detect the wrong DNS, email with the DNS Setting Altered template (detected setting against expected setting), fix the device with your Task 1 D4 code, then update a ticket. Updating uses a different HTTP method than creating; check the API docs page for which one."
+       }
+      }
+     ]
+    },
+    "Check": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "Which three screenshots does C4 need?",
+       "text": {
+        "content": "Which three screenshots does C4 need?"
+       }
+      }
+     ]
+    },
+    "Answer": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "The Mailhog email, the corrected DNS configuration, and the API response after the ticket update.",
+       "text": {
+        "content": "The Mailhog email, the corrected DNS configuration, and the API response after the ticket update."
+       }
+      }
+     ]
+    },
+    "Go To": {
+     "type": "url",
+     "url": "https://lrps.wgu.edu/provision/565781881"
+    },
+    "Also Open": {
+     "type": "url",
+     "url": "https://app.notion.com/p/3f9098dedfdb8168b513c697cde6c220"
+    }
+   }
+  },
+  {
+   "object": "page",
+   "id": "3fa098dedfdb81b3ad92fa721192eb72",
+   "properties": {
+    "Step": {
+     "type": "title",
+     "title": [
+      {
+       "type": "text",
+       "plain_text": "C3: one ticket per unavailable device",
+       "text": {
+        "content": "C3: one ticket per unavailable device"
+       }
+      }
+     ]
+    },
+    "Order": {
+     "type": "number",
+     "number": 17
+    },
+    "Reviewed": {
+     "type": "checkbox",
+     "checkbox": false
+    },
+    "Submission": {
+     "type": "relation",
+     "relation": [
+      {
+       "id": "3fa098de-dfdb-815e-aa43-dba049eae921"
+      }
+     ]
+    },
+    "Due": {
+     "type": "date",
+     "date": null
+    },
+    "Date Completed": {
+     "type": "date",
+     "date": null
+    },
+    "Warmup": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "Create the ticket in the same branch of your code as the C2 email, once per device that has just gone offline. Reuse your Task 1 C2 ticket function and print the API response.",
+       "text": {
+        "content": "Create the ticket in the same branch of your code as the C2 email, once per device that has just gone offline. Reuse your Task 1 C2 ticket function and print the API response."
+       }
+      }
+     ]
+    },
+    "Check": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "What two things must each C3 ticket name?",
+       "text": {
+        "content": "What two things must each C3 ticket name?"
+       }
+      }
+     ]
+    },
+    "Answer": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "The type of issue and the unavailable device.",
+       "text": {
+        "content": "The type of issue and the unavailable device."
+       }
+      }
+     ]
+    },
+    "Go To": {
+     "type": "url",
+     "url": "https://lrps.wgu.edu/provision/565781881"
+    },
+    "Also Open": {
+     "type": "url",
+     "url": "https://app.notion.com/p/3f9098dedfdb8168b513c697cde6c220"
+    }
+   }
+  },
+  {
+   "object": "page",
+   "id": "3fa098dedfdb810f83d6ea58f2e485ed",
+   "properties": {
+    "Step": {
+     "type": "title",
+     "title": [
+      {
+       "type": "text",
+       "plain_text": "C2: unavailable device email",
+       "text": {
+        "content": "C2: unavailable device email"
+       }
+      }
+     ]
+    },
+    "Order": {
+     "type": "number",
+     "number": 16
+    },
+    "Reviewed": {
+     "type": "checkbox",
+     "checkbox": false
+    },
+    "Submission": {
+     "type": "relation",
+     "relation": [
+      {
+       "id": "3fa098de-dfdb-815e-aa43-dba049eae921"
+      }
+     ]
+    },
+    "Due": {
+     "type": "date",
+     "date": null
+    },
+    "Date Completed": {
+     "type": "date",
+     "date": null
+    },
+    "Warmup": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "A monitor is a while True loop: check every device, react to anything that changed, then time.sleep() before the next round. Keep a record of which devices you already reported, so one outage sends one email instead of one per round.",
+       "text": {
+        "content": "A monitor is a while True loop: check every device, react to anything that changed, then time.sleep() before the next round. Keep a record of which devices you already reported, so one outage sends one email instead of one per round."
+       }
+      }
+     ]
+    },
+    "Check": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "Your monitor sent 40 emails for one offline PC. What is missing?",
+       "text": {
+        "content": "Your monitor sent 40 emails for one offline PC. What is missing?"
+       }
+      }
+     ]
+    },
+    "Answer": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "State tracking. Remember the PC is already down and alert only when its status changes.",
+       "text": {
+        "content": "State tracking. Remember the PC is already down and alert only when its status changes."
+       }
+      }
+     ]
+    },
+    "Go To": {
+     "type": "url",
+     "url": "https://lrps.wgu.edu/provision/565781881"
+    },
+    "Also Open": {
+     "type": "url",
+     "url": "https://wgu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7774cf34-cd6d-4834-a1f9-b4e3010e558e"
+    }
+   }
+  },
+  {
+   "object": "page",
+   "id": "3fa098dedfdb816c8df6fe79430623a3",
+   "properties": {
+    "Step": {
+     "type": "title",
+     "title": [
+      {
+       "type": "text",
+       "plain_text": "C1: device list",
+       "text": {
+        "content": "C1: device list"
+       }
+      }
+     ]
+    },
+    "Order": {
+     "type": "number",
+     "number": 15
+    },
+    "Reviewed": {
+     "type": "checkbox",
+     "checkbox": false
+    },
+    "Submission": {
+     "type": "relation",
+     "relation": [
+      {
+       "id": "3fa098de-dfdb-815e-aa43-dba049eae921"
+      }
+     ]
+    },
+    "Due": {
+     "type": "date",
+     "date": null
+    },
+    "Date Completed": {
+     "type": "date",
+     "date": null
+    },
+    "Warmup": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "The same job as Task 1 B1. Keep your CSV reader as a function in its own module, then import it into the Task 2 scripts instead of copying it.",
+       "text": {
+        "content": "The same job as Task 1 B1. Keep your CSV reader as a function in its own module, then import it into the Task 2 scripts instead of copying it."
+       }
+      }
+     ]
+    },
+    "Check": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "What is the advantage of importing the function rather than pasting it?",
+       "text": {
+        "content": "What is the advantage of importing the function rather than pasting it?"
+       }
+      }
+     ]
+    },
+    "Answer": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "One copy to fix. A change in the module reaches every script that imports it.",
+       "text": {
+        "content": "One copy to fix. A change in the module reaches every script that imports it."
+       }
+      }
+     ]
+    },
+    "Go To": {
+     "type": "url",
+     "url": "https://lrps.wgu.edu/provision/565781881"
+    },
+    "Also Open": {
+     "type": "url",
+     "url": "https://app.notion.com/p/3f9098dedfdb8168b513c697cde6c220"
+    }
+   }
+  },
+  {
+   "object": "page",
+   "id": "3fa098dedfdb817a8fe8c3e2752704de",
+   "properties": {
+    "Step": {
+     "type": "title",
+     "title": [
+      {
+       "type": "text",
+       "plain_text": "B: DNS backup folders and files",
+       "text": {
+        "content": "B: DNS backup folders and files"
+       }
+      }
+     ]
+    },
+    "Order": {
+     "type": "number",
+     "number": 14
+    },
+    "Reviewed": {
+     "type": "checkbox",
+     "checkbox": false
+    },
+    "Submission": {
+     "type": "relation",
+     "relation": [
+      {
+       "id": "3fa098de-dfdb-815e-aa43-dba049eae921"
+      }
+     ]
+    },
+    "Due": {
+     "type": "date",
+     "date": null
+    },
+    "Date Completed": {
+     "type": "date",
+     "date": null
+    },
+    "Warmup": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "os.makedirs(path, exist_ok=True) creates nested folders in one call. open(path, \"w\") writes a file. Connect to DNS1 and DNS2 themselves and save the output of a real DNS configuration command into each server's file. BIND keeps its configuration and zone files under /etc/bind. Run this before you change anything on the network.",
+       "text": {
+        "content": "os.makedirs(path, exist_ok=True) creates nested folders in one call. open(path, \"w\") writes a file. Connect to DNS1 and DNS2 themselves and save the output of a real DNS configuration command into each server's file. BIND keeps its configuration and zone files under /etc/bind. Run this before you change anything on the network."
+       }
+      }
+     ]
+    },
+    "Check": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "Which folder and file names does the rubric check?",
+       "text": {
+        "content": "Which folder and file names does the rubric check?"
+       }
+      }
+     ]
+    },
+    "Answer": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "DNS-Backup, containing Server-1 and Server-2, each with a record-config.txt.",
+       "text": {
+        "content": "DNS-Backup, containing Server-1 and Server-2, each with a record-config.txt."
+       }
+      }
+     ]
+    },
+    "Go To": {
+     "type": "url",
+     "url": "https://lrps.wgu.edu/provision/565781881"
+    },
+    "Also Open": {
+     "type": "url",
+     "url": "https://app.notion.com/p/3f9098dedfdb8168b513c697cde6c220"
+    }
+   }
+  },
+  {
+   "object": "page",
+   "id": "3fa098dedfdb8187acd8fb0e27d76de8",
+   "properties": {
+    "Step": {
+     "type": "title",
+     "title": [
+      {
+       "type": "text",
+       "plain_text": "A: repository used correctly, scripts named for their function",
+       "text": {
+        "content": "A: repository used correctly, scripts named for their function"
+       }
+      }
+     ]
+    },
+    "Order": {
+     "type": "number",
+     "number": 13
+    },
+    "Reviewed": {
+     "type": "checkbox",
+     "checkbox": false
+    },
+    "Submission": {
+     "type": "relation",
+     "relation": [
+      {
+       "id": "3fa098de-dfdb-815e-aa43-dba049eae921"
+      }
+     ]
+    },
+    "Due": {
+     "type": "date",
+     "date": null
+    },
+    "Date Completed": {
+     "type": "date",
+     "date": null
+    },
+    "Warmup": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "Task 2 adds one rule: name each script for what it does, such as backup_dns.py or monitor_network.py. The same v1 and v2 commit rule still applies to every file.",
+       "text": {
+        "content": "Task 2 adds one rule: name each script for what it does, such as backup_dns.py or monitor_network.py. The same v1 and v2 commit rule still applies to every file."
+       }
+      }
+     ]
+    },
+    "Check": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "What must Task 2's ZIP contain that Task 1's did not?",
+       "text": {
+        "content": "What must Task 2's ZIP contain that Task 1's did not?"
+       }
+      }
+     ]
+    },
+    "Answer": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "The screenshots. Commit the screenshot file before you download the ZIP.",
+       "text": {
+        "content": "The screenshots. Commit the screenshot file before you download the ZIP."
+       }
+      }
+     ]
+    },
+    "Go To": {
+     "type": "url",
+     "url": "https://lrps.wgu.edu/provision/565781881"
+    },
+    "Also Open": {
+     "type": "url",
+     "url": "https://app.notion.com/p/3f9098dedfdb8168b513c697cde6c220"
+    }
+   }
+  },
+  {
+   "object": "page",
+   "id": "3fa098dedfdb816b9704d199de9997a0",
+   "properties": {
+    "Step": {
+     "type": "title",
+     "title": [
+      {
+       "type": "text",
+       "plain_text": "Task 2 branch made and cloned in the Task 2 lab",
+       "text": {
+        "content": "Task 2 branch made and cloned in the Task 2 lab"
+       }
+      }
+     ]
+    },
+    "Order": {
+     "type": "number",
+     "number": 12
+    },
+    "Reviewed": {
+     "type": "checkbox",
+     "checkbox": false
+    },
+    "Submission": {
+     "type": "relation",
+     "relation": [
+      {
+       "id": "3fa098de-dfdb-815e-aa43-dba049eae921"
+      }
+     ]
+    },
+    "Due": {
+     "type": "date",
+     "date": null
+    },
+    "Date Completed": {
+     "type": "date",
+     "date": null
+    },
+    "Warmup": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "Task 2 has its own lab. Never use the Task 1 lab for it. Make the Task 2 branch from your Task 1 branch so your finished functions come along, then clone it in the Task 2 lab.",
+       "text": {
+        "content": "Task 2 has its own lab. Never use the Task 1 lab for it. Make the Task 2 branch from your Task 1 branch so your finished functions come along, then clone it in the Task 2 lab."
+       }
+      }
+     ]
+    },
+    "Check": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "Why branch from Task 1 instead of from main?",
+       "text": {
+        "content": "Why branch from Task 1 instead of from main?"
+       }
+      }
+     ]
+    },
+    "Answer": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "Your Task 1 code comes with it, ready to reuse in the monitor.",
+       "text": {
+        "content": "Your Task 1 code comes with it, ready to reuse in the monitor."
+       }
+      }
+     ]
+    },
+    "Go To": {
+     "type": "url",
+     "url": "https://lrps.wgu.edu/provision/565781881"
+    },
+    "Also Open": {
+     "type": "url",
+     "url": "https://app.notion.com/p/3f9098dedfdb8168b513c697cde6c220"
+    }
+   }
+  },
+  {
+   "object": "page",
+   "id": "3fa098dedfdb815a99e9e39f198248f9",
+   "properties": {
+    "Step": {
+     "type": "title",
+     "title": [
+      {
+       "type": "text",
+       "plain_text": "Task 1 submitted",
+       "text": {
+        "content": "Task 1 submitted"
+       }
+      }
+     ]
+    },
+    "Order": {
+     "type": "number",
+     "number": 11
+    },
+    "Reviewed": {
+     "type": "checkbox",
+     "checkbox": false
+    },
+    "Submission": {
+     "type": "relation",
+     "relation": [
+      {
+       "id": "3fa098de-dfdb-81e8-8b0e-c65f65f56750"
+      }
+     ]
+    },
+    "Due": {
+     "type": "date",
+     "date": {
+      "start": "2026-10-24"
+     }
+    },
+    "Date Completed": {
+     "type": "date",
+     "date": null
+    },
+    "Warmup": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "Read each Competent line on the Task 1 page once more against your screenshots and commits. Then submit the branch URL, the commit history PDF, the ZIP and the screenshot file.",
+       "text": {
+        "content": "Read each Competent line on the Task 1 page once more against your screenshots and commits. Then submit the branch URL, the commit history PDF, the ZIP and the screenshot file."
+       }
+      }
+     ]
+    },
+    "Check": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "Should the submitted URL point at main or at your working branch?",
+       "text": {
+        "content": "Should the submitted URL point at main or at your working branch?"
+       }
+      }
+     ]
+    },
+    "Answer": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "Your Task 1 working branch.",
+       "text": {
+        "content": "Your Task 1 working branch."
+       }
+      }
+     ]
+    },
+    "Go To": {
+     "type": "url",
+     "url": "https://app.notion.com/p/3f9098dedfdb81d38028ec585f3575da"
+    },
+    "Also Open": {
+     "type": "url",
+     "url": "https://my.wgu.edu/courses/course/41600022"
+    }
+   }
+  },
+  {
+   "object": "page",
+   "id": "3fa098dedfdb81319097fcfe83be5c49",
+   "properties": {
+    "Step": {
+     "type": "title",
+     "title": [
+      {
+       "type": "text",
+       "plain_text": "Task 1 deliverables assembled and checked",
+       "text": {
+        "content": "Task 1 deliverables assembled and checked"
+       }
+      }
+     ]
+    },
+    "Order": {
+     "type": "number",
+     "number": 10
+    },
+    "Reviewed": {
+     "type": "checkbox",
+     "checkbox": false
+    },
+    "Submission": {
+     "type": "relation",
+     "relation": [
+      {
+       "id": "3fa098de-dfdb-81e8-8b0e-c65f65f56750"
+      }
+     ]
+    },
+    "Due": {
+     "type": "date",
+     "date": null
+    },
+    "Date Completed": {
+     "type": "date",
+     "date": null
+    },
+    "Warmup": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "Commit history PDF: in GitLab open Code, then Commits, then print the page to PDF. Repository ZIP: Code, then Download source code, then zip. Put every screenshot in one PDF or Word file. File names may use only letters, numbers, spaces and ! - _ . * ' ( ).",
+       "text": {
+        "content": "Commit history PDF: in GitLab open Code, then Commits, then print the page to PDF. Repository ZIP: Code, then Download source code, then zip. Put every screenshot in one PDF or Word file. File names may use only letters, numbers, spaces and ! - _ . * ' ( )."
+       }
+      }
+     ]
+    },
+    "Check": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "How many screenshots does Task 1 need?",
+       "text": {
+        "content": "How many screenshots does Task 1 need?"
+       }
+      }
+     ]
+    },
+    "Answer": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "7, plus one more for each affected device in D4.",
+       "text": {
+        "content": "7, plus one more for each affected device in D4."
+       }
+      }
+     ]
+    },
+    "Go To": {
+     "type": "url",
+     "url": "https://app.notion.com/p/3f9098dedfdb81d38028ec585f3575da"
+    },
+    "Also Open": {
+     "type": "url",
+     "url": "https://lrps.wgu.edu/provision/565781699"
+    }
+   }
+  },
+  {
+   "object": "page",
+   "id": "3fa098dedfdb818c966ff4f74e2ac222",
+   "properties": {
+    "Step": {
+     "type": "title",
+     "title": [
+      {
+       "type": "text",
+       "plain_text": "E: resolution email",
+       "text": {
+        "content": "E: resolution email"
+       }
+      }
+     ]
+    },
+    "Order": {
+     "type": "number",
+     "number": 9
+    },
+    "Reviewed": {
+     "type": "checkbox",
+     "checkbox": false
+    },
+    "Submission": {
+     "type": "relation",
+     "relation": [
+      {
+       "id": "3fa098de-dfdb-81e8-8b0e-c65f65f56750"
+      }
+     ]
+    },
+    "Due": {
+     "type": "date",
+     "date": null
+    },
+    "Date Completed": {
+     "type": "date",
+     "date": null
+    },
+    "Warmup": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "Reuse your C1 email code. Build the {device_list} part by joining one line per fixed device, for example with \"\\n\".join(...). The subject and wording come straight from the Resolution Notification template.",
+       "text": {
+        "content": "Reuse your C1 email code. Build the {device_list} part by joining one line per fixed device, for example with \"\\n\".join(...). The subject and wording come straight from the Resolution Notification template."
+       }
+      }
+     ]
+    },
+    "Check": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "Which two facts per device must the resolution email list?",
+       "text": {
+        "content": "Which two facts per device must the resolution email list?"
+       }
+      }
+     ]
+    },
+    "Answer": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "The hostname and the IP address.",
+       "text": {
+        "content": "The hostname and the IP address."
+       }
+      }
+     ]
+    },
+    "Go To": {
+     "type": "url",
+     "url": "https://lrps.wgu.edu/provision/565781699"
+    },
+    "Also Open": {
+     "type": "url",
+     "url": "https://app.notion.com/p/3f9098dedfdb81d38028ec585f3575da"
+    }
+   }
+  },
+  {
+   "object": "page",
+   "id": "3fa098dedfdb81a9a373e4f2cf27ef91",
+   "properties": {
+    "Step": {
+     "type": "title",
+     "title": [
+      {
+       "type": "text",
+       "plain_text": "D4: each affected device fixed",
+       "text": {
+        "content": "D4: each affected device fixed"
+       }
+      }
+     ]
+    },
+    "Order": {
+     "type": "number",
+     "number": 8
+    },
+    "Reviewed": {
+     "type": "checkbox",
+     "checkbox": false
+    },
+    "Submission": {
+     "type": "relation",
+     "relation": [
+      {
+       "id": "3fa098de-dfdb-81e8-8b0e-c65f65f56750"
+      }
+     ]
+    },
+    "Due": {
+     "type": "date",
+     "date": null
+    },
+    "Date Completed": {
+     "type": "date",
+     "date": null
+    },
+    "Warmup": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "First find where the rogue address was set. On Ubuntu, lasting DNS settings usually come from netplan files in /etc/netplan, applied with sudo netplan apply, or from systemd-resolved settings. resolvectl dns <interface> <ip> changes it only until the next restart. Any fix is accepted as long as a check afterwards shows the internal DNS servers.",
+       "text": {
+        "content": "First find where the rogue address was set. On Ubuntu, lasting DNS settings usually come from netplan files in /etc/netplan, applied with sudo netplan apply, or from systemd-resolved settings. resolvectl dns <interface> <ip> changes it only until the next restart. Any fix is accepted as long as a check afterwards shows the internal DNS servers."
+       }
+      }
+     ]
+    },
+    "Check": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "How many D4 screenshots do you need?",
+       "text": {
+        "content": "How many D4 screenshots do you need?"
+       }
+      }
+     ]
+    },
+    "Answer": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "One per affected device, each showing that device's DNS settings after the fix.",
+       "text": {
+        "content": "One per affected device, each showing that device's DNS settings after the fix."
+       }
+      }
+     ]
+    },
+    "Go To": {
+     "type": "url",
+     "url": "https://lrps.wgu.edu/provision/565781699"
+    },
+    "Also Open": {
+     "type": "url",
+     "url": "https://app.notion.com/p/3f9098dedfdb81d38028ec585f3575da"
+    }
+   }
+  },
+  {
+   "object": "page",
+   "id": "3fa098dedfdb81faa836c73b460e8100",
+   "properties": {
+    "Step": {
+     "type": "title",
+     "title": [
+      {
+       "type": "text",
+       "plain_text": "D1 to D3: DNS service down, restarted, up",
+       "text": {
+        "content": "D1 to D3: DNS service down, restarted, up"
+       }
+      }
+     ]
+    },
+    "Order": {
+     "type": "number",
+     "number": 7
+    },
+    "Reviewed": {
+     "type": "checkbox",
+     "checkbox": false
+    },
+    "Submission": {
+     "type": "relation",
+     "relation": [
+      {
+       "id": "3fa098de-dfdb-81e8-8b0e-c65f65f56750"
+      }
+     ]
+    },
+    "Due": {
+     "type": "date",
+     "date": null
+    },
+    "Date Completed": {
+     "type": "date",
+     "date": null
+    },
+    "Warmup": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "systemctl status <service> shows whether a service is active. sudo systemctl restart <service> restarts it. DNS servers on Ubuntu usually run BIND, whose service can be named named or bind9. Open a console on DNS1 and DNS2 and confirm the name by hand before scripting it.",
+       "text": {
+        "content": "systemctl status <service> shows whether a service is active. sudo systemctl restart <service> restarts it. DNS servers on Ubuntu usually run BIND, whose service can be named named or bind9. Open a console on DNS1 and DNS2 and confirm the name by hand before scripting it."
+       }
+      }
+     ]
+    },
+    "Check": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "Which three moments must your D1 to D3 screenshots show?",
+       "text": {
+        "content": "Which three moments must your D1 to D3 screenshots show?"
+       }
+      }
+     ]
+    },
+    "Answer": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "The service down, the restart running, and the service back up.",
+       "text": {
+        "content": "The service down, the restart running, and the service back up."
+       }
+      }
+     ]
+    },
+    "Go To": {
+     "type": "url",
+     "url": "https://lrps.wgu.edu/provision/565781699"
+    },
+    "Also Open": {
+     "type": "url",
+     "url": "https://app.notion.com/p/3f9098dedfdb81d38028ec585f3575da"
+    }
+   }
+  },
+  {
+   "object": "page",
+   "id": "3fa098dedfdb81f6a9cfc0465ca3f2cb",
+   "properties": {
+    "Step": {
+     "type": "title",
+     "title": [
+      {
+       "type": "text",
+       "plain_text": "C2: one ticket per compromised device",
+       "text": {
+        "content": "C2: one ticket per compromised device"
+       }
+      }
+     ]
+    },
+    "Order": {
+     "type": "number",
+     "number": 6
+    },
+    "Reviewed": {
+     "type": "checkbox",
+     "checkbox": false
+    },
+    "Submission": {
+     "type": "relation",
+     "relation": [
+      {
+       "id": "3fa098de-dfdb-81e8-8b0e-c65f65f56750"
+      }
+     ]
+    },
+    "Due": {
+     "type": "date",
+     "date": null
+    },
+    "Date Completed": {
+     "type": "date",
+     "date": null
+    },
+    "Warmup": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "The requests library sends HTTP calls from Python. Creating a ticket is a POST with a JSON body and an Authorization header that carries the Bearer token. A 2xx status code means it worked; print response.status_code and response.json() as proof. Try the call by hand first in the API docs page: Authorize, then Try it out.",
+       "text": {
+        "content": "The requests library sends HTTP calls from Python. Creating a ticket is a POST with a JSON body and an Authorization header that carries the Bearer token. A 2xx status code means it worked; print response.status_code and response.json() as proof. Try the call by hand first in the API docs page: Authorize, then Try it out."
+       }
+      }
+     ]
+    },
+    "Check": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "Three devices are compromised. How many tickets do you create, and what goes in each one?",
+       "text": {
+        "content": "Three devices are compromised. How many tickets do you create, and what goes in each one?"
+       }
+      }
+     ]
+    },
+    "Answer": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "Three, one per device. Each names the issue type, the device and its status.",
+       "text": {
+        "content": "Three, one per device. Each names the issue type, the device and its status."
+       }
+      }
+     ]
+    },
+    "Go To": {
+     "type": "url",
+     "url": "https://lrps.wgu.edu/provision/565781699"
+    },
+    "Also Open": {
+     "type": "url",
+     "url": "https://app.notion.com/p/3f9098dedfdb81d38028ec585f3575da"
+    }
+   }
+  },
+  {
+   "object": "page",
+   "id": "3fa098dedfdb81f3b27cd7a14938a206",
+   "properties": {
+    "Step": {
+     "type": "title",
+     "title": [
+      {
+       "type": "text",
+       "plain_text": "C1: incident alert email",
+       "text": {
+        "content": "C1: incident alert email"
+       }
+      }
+     ]
+    },
+    "Order": {
+     "type": "number",
+     "number": 5
+    },
+    "Reviewed": {
+     "type": "checkbox",
+     "checkbox": false
+    },
+    "Submission": {
+     "type": "relation",
+     "relation": [
+      {
+       "id": "3fa098de-dfdb-81e8-8b0e-c65f65f56750"
+      }
+     ]
+    },
+    "Due": {
+     "type": "date",
+     "date": null
+    },
+    "Date Completed": {
+     "type": "date",
+     "date": null
+    },
+    "Warmup": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "smtplib.SMTP(host, port) opens a connection to a mail server. email.message.EmailMessage holds the subject, sender, recipient and body, and send_message sends it. The lab's SMTP server hands every message to Mailhog, which you open from the bookmark in the lab's Firefox. The lab instructions give the SMTP address and port.",
+       "text": {
+        "content": "smtplib.SMTP(host, port) opens a connection to a mail server. email.message.EmailMessage holds the subject, sender, recipient and body, and send_message sends it. The lab's SMTP server hands every message to Mailhog, which you open from the bookmark in the lab's Firefox. The lab instructions give the SMTP address and port."
+       }
+      }
+     ]
+    },
+    "Check": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "Which line do you add to the Incident Alert template that the template itself leaves out?",
+       "text": {
+        "content": "Which line do you add to the Incident Alert template that the template itself leaves out?"
+       }
+      }
+     ]
+    },
+    "Answer": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "Service: DNS, next to the device name and IP address. Evaluators require it.",
+       "text": {
+        "content": "Service: DNS, next to the device name and IP address. Evaluators require it."
+       }
+      }
+     ]
+    },
+    "Go To": {
+     "type": "url",
+     "url": "https://lrps.wgu.edu/provision/565781699"
+    },
+    "Also Open": {
+     "type": "url",
+     "url": "https://app.notion.com/p/3f9098dedfdb81d38028ec585f3575da"
+    }
+   }
+  },
+  {
+   "object": "page",
+   "id": "3fa098dedfdb81fc86a1d3aacdfc0f41",
+   "properties": {
+    "Step": {
+     "type": "title",
+     "title": [
+      {
+       "type": "text",
+       "plain_text": "B2: ping and DNS check",
+       "text": {
+        "content": "B2: ping and DNS check"
+       }
+      }
+     ]
+    },
+    "Order": {
+     "type": "number",
+     "number": 4
+    },
+    "Reviewed": {
+     "type": "checkbox",
+     "checkbox": false
+    },
+    "Submission": {
+     "type": "relation",
+     "relation": [
+      {
+       "id": "3fa098de-dfdb-81e8-8b0e-c65f65f56750"
+      }
+     ]
+    },
+    "Due": {
+     "type": "date",
+     "date": {
+      "start": "2026-10-20"
+     }
+    },
+    "Date Completed": {
+     "type": "date",
+     "date": null
+    },
+    "Warmup": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "ping sends ICMP echo requests; a reply means the device is reachable. On Ubuntu, /etc/resolv.conf often shows nameserver 127.0.0.53, which is the local systemd-resolved stub, not the real DNS server. resolvectl status shows the upstream DNS servers each interface actually uses. The internal DNS servers are DNS1 at 10.10.10.10 and DNS2 at 10.10.10.20. Anything else is the rogue address.",
+       "text": {
+        "content": "ping sends ICMP echo requests; a reply means the device is reachable. On Ubuntu, /etc/resolv.conf often shows nameserver 127.0.0.53, which is the local systemd-resolved stub, not the real DNS server. resolvectl status shows the upstream DNS servers each interface actually uses. The internal DNS servers are DNS1 at 10.10.10.10 and DNS2 at 10.10.10.20. Anything else is the rogue address."
+       }
+      }
+     ]
+    },
+    "Check": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "A PC's resolv.conf says nameserver 127.0.0.53. Is that PC compromised?",
+       "text": {
+        "content": "A PC's resolv.conf says nameserver 127.0.0.53. Is that PC compromised?"
+       }
+      }
+     ]
+    },
+    "Answer": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "Not from that alone. It is the local stub resolver. Run resolvectl status on the PC and compare its upstream DNS servers to 10.10.10.10 and 10.10.10.20.",
+       "text": {
+        "content": "Not from that alone. It is the local stub resolver. Run resolvectl status on the PC and compare its upstream DNS servers to 10.10.10.10 and 10.10.10.20."
+       }
+      }
+     ]
+    },
+    "Go To": {
+     "type": "url",
+     "url": "https://wgu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ff03d900-18fb-459f-bfe7-b4a6012be9bd"
+    },
+    "Also Open": {
+     "type": "url",
+     "url": "https://lrps.wgu.edu/provision/565781699"
+    }
+   }
+  },
+  {
+   "object": "page",
+   "id": "3fa098dedfdb81118042df6fead7b053",
+   "properties": {
+    "Step": {
+     "type": "title",
+     "title": [
+      {
+       "type": "text",
+       "plain_text": "B1: device list",
+       "text": {
+        "content": "B1: device list"
+       }
+      }
+     ]
+    },
+    "Order": {
+     "type": "number",
+     "number": 3
+    },
+    "Reviewed": {
+     "type": "checkbox",
+     "checkbox": false
+    },
+    "Submission": {
+     "type": "relation",
+     "relation": [
+      {
+       "id": "3fa098de-dfdb-81e8-8b0e-c65f65f56750"
+      }
+     ]
+    },
+    "Due": {
+     "type": "date",
+     "date": null
+    },
+    "Date Completed": {
+     "type": "date",
+     "date": null
+    },
+    "Warmup": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "Python's csv module reads a file one row at a time. csv.DictReader turns each row into a dictionary keyed by the header row, so row[\"Device Name\"] gives you the name. B1 prints all 16 names. Filtering down to the devices you check starts in B2.",
+       "text": {
+        "content": "Python's csv module reads a file one row at a time. csv.DictReader turns each row into a dictionary keyed by the header row, so row[\"Device Name\"] gives you the name. B1 prints all 16 names. Filtering down to the devices you check starts in B2."
+       }
+      }
+     ]
+    },
+    "Check": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "Some rows have \"Services \" in the Location column. What goes wrong if you compare that to \"Services\", and what fixes it?",
+       "text": {
+        "content": "Some rows have \"Services \" in the Location column. What goes wrong if you compare that to \"Services\", and what fixes it?"
+       }
+      }
+     ]
+    },
+    "Answer": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "The trailing space makes the comparison False. Calling .strip() on the value removes it.",
+       "text": {
+        "content": "The trailing space makes the comparison False. Calling .strip() on the value removes it."
+       }
+      }
+     ]
+    },
+    "Go To": {
+     "type": "url",
+     "url": "https://lrps.wgu.edu/provision/565781699"
+    },
+    "Also Open": {
+     "type": "url",
+     "url": "https://app.notion.com/p/3f9098dedfdb81d38028ec585f3575da"
+    }
+   }
+  },
+  {
+   "object": "page",
+   "id": "3fa098dedfdb810da8d4d3ff2f86c0af",
+   "properties": {
+    "Step": {
+     "type": "title",
+     "title": [
+      {
+       "type": "text",
+       "plain_text": "A: GitLab set up correctly",
+       "text": {
+        "content": "A: GitLab set up correctly"
+       }
+      }
+     ]
+    },
+    "Order": {
+     "type": "number",
+     "number": 2
+    },
+    "Reviewed": {
+     "type": "checkbox",
+     "checkbox": true
+    },
+    "Submission": {
+     "type": "relation",
+     "relation": [
+      {
+       "id": "3fa098de-dfdb-81e8-8b0e-c65f65f56750"
+      }
+     ]
+    },
+    "Due": {
+     "type": "date",
+     "date": null
+    },
+    "Date Completed": {
+     "type": "date",
+     "date": null
+    },
+    "Warmup": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "A Personal Access Token stands in for your password when Git talks to GitLab, and GitLab shows it only once. git config user.name and user.email stamp each commit with an author, which is why a commit can fail without them. The D522 GitLab instructions want every code file committed at least twice: a rough v1 and a finished v2.",
+       "text": {
+        "content": "A Personal Access Token stands in for your password when Git talks to GitLab, and GitLab shows it only once. git config user.name and user.email stamp each commit with an author, which is why a commit can fail without them. The D522 GitLab instructions want every code file committed at least twice: a rough v1 and a finished v2."
+       }
+      }
+     ]
+    },
+    "Check": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "What does every commit message need, according to the D522 GitLab instructions?",
+       "text": {
+        "content": "What does every commit message need, according to the D522 GitLab instructions?"
+       }
+      }
+     ]
+    },
+    "Answer": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "The file name and the version, for example: Committing check_dns.py version 1.",
+       "text": {
+        "content": "The file name and the version, for example: Committing check_dns.py version 1."
+       }
+      }
+     ]
+    },
+    "Go To": {
+     "type": "url",
+     "url": "https://wgu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=980fffd7-28a8-42e9-8486-b48300708abc"
+    },
+    "Also Open": {
+     "type": "url",
+     "url": "https://lrps.wgu.edu/provision/565781699"
+    }
+   }
+  },
+  {
+   "object": "page",
+   "id": "3fa098dedfdb81178f75cf64b30f97f5",
+   "properties": {
+    "Step": {
+     "type": "title",
+     "title": [
+      {
+       "type": "text",
+       "plain_text": "Day-one setup: pipeline, branch, clone, first commit",
+       "text": {
+        "content": "Day-one setup: pipeline, branch, clone, first commit"
+       }
+      }
+     ]
+    },
+    "Order": {
+     "type": "number",
+     "number": 1
+    },
+    "Reviewed": {
+     "type": "checkbox",
+     "checkbox": true
+    },
+    "Submission": {
+     "type": "relation",
+     "relation": [
+      {
+       "id": "3fa098de-dfdb-81e8-8b0e-c65f65f56750"
+      }
+     ]
+    },
+    "Due": {
+     "type": "date",
+     "date": {
+      "start": "2026-10-16"
+     }
+    },
+    "Date Completed": {
+     "type": "date",
+     "date": {
+      "start": "2026-10-18"
+     }
+    },
+    "Warmup": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "A pipeline is a job GitLab runs for you. Here it runs once and copies the course template into a repository of your own. A branch is your own line of work inside that repository; you work on yours, never on main. Cloning copies the repository into the lab's VS Code. A commit saves a snapshot on the lab machine. A push sends your commits up to GitLab.",
+       "text": {
+        "content": "A pipeline is a job GitLab runs for you. Here it runs once and copies the course template into a repository of your own. A branch is your own line of work inside that repository; you work on yours, never on main. Cloning copies the repository into the lab's VS Code. A commit saves a snapshot on the lab machine. A push sends your commits up to GitLab."
+       }
+      }
+     ]
+    },
+    "Check": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "You committed a file in the lab, but it is not showing on GitLab. Which step did you skip?",
+       "text": {
+        "content": "You committed a file in the lab, but it is not showing on GitLab. Which step did you skip?"
+       }
+      }
+     ]
+    },
+    "Answer": {
+     "type": "rich_text",
+     "rich_text": [
+      {
+       "type": "text",
+       "plain_text": "The push. A commit lives only on the lab machine until you push it, and the lab is wiped after 6 hours.",
+       "text": {
+        "content": "The push. A commit lives only on the lab machine until you push it, and the lab is wiped after 6 hours."
+       }
+      }
+     ]
+    },
+    "Go To": {
+     "type": "url",
+     "url": "https://cm.wgu.edu/t5/Frequently-Asked-Questions/WGU-GitLab-Environment/ta-p/50512"
+    },
+    "Also Open": {
+     "type": "url",
+     "url": "https://wgu.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6fe225d4-87e8-4e2e-b653-b482012eecba"
+    }
+   }
+  }
+ ],
+ "has_more": false,
+ "next_cursor": null
+}

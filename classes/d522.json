@@ -1,0 +1,13 @@
+{
+  "code": "D522",
+  "name": "Python for IT Automation",
+  "active": true,
+  "finalTarget": "2026-11-06",
+  "notionPage": "https://app.notion.com/p/3f7098dedfdb8116b9cae5dc7a839c6f",
+  "stepsDataSourceId": "8d18a387-6e48-47eb-b606-67efdf4f66da",
+  "stepsDatabaseId": "de92a182-21d3-496e-8502-2c57254dba97",
+  "tasks": [
+    { "id": "3fa098de-dfdb-81e8-8b0e-c65f65f56750", "name": "Task 1", "title": "Incident response", "target": "2026-10-24" },
+    { "id": "3fa098de-dfdb-815e-aa43-dba049eae921", "name": "Task 2", "title": "Proactive monitoring", "target": "2026-11-01" }
+  ]
+}

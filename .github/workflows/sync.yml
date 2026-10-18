@@ -1,0 +1,41 @@
+name: Sync from Notion and publish
+
+on:
+  schedule:
+    # Every 30 minutes, 7 AM to midnight Eastern (times are UTC).
+    - cron: "*/30 11-23 * * *"
+    - cron: "*/30 0-4 * * *"
+  workflow_dispatch: # "Run workflow" button in GitHub, for a sync right now
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  sync-and-publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Read Notion
+        run: node scripts/sync.mjs
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deployment
+        uses: actions/deploy-pages@v4

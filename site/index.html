@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#2551d6">
+<title>WGU Class Launchpad</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+[hidden] { display: none !important; }
+/* Layout: launch pad first (warmup, then one button into the work), score strip, then a lane per task where each step is a router hop. */
+:root {
+  --bg: #f3f5f8;
+  --panel: #ffffff;
+  --ink: #18212e;
+  --muted: #5b6676;
+  --line: #d6dce5;
+  --hop: #e6eaf0;
+  --cobalt: #2551d6;
+  --cobalt-ink: #ffffff;
+  --cobalt-soft: #dfe7fc;
+  --amber: #b06e00;
+  --amber-soft: #fbefd6;
+  --good: #1d8a5a;
+  --good-soft: #dcf2e7;
+  --font-display: "Unbounded", "Arial Black", system-ui, sans-serif;
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f141c; --panel: #161d28; --ink: #e7ecf3; --muted: #93a0b2; --line: #263142; --hop: #1f2836;
+    --cobalt: #7d9cff; --cobalt-ink: #0f141c; --cobalt-soft: #1c2848; --amber: #f2b23f; --amber-soft: #3a2c10;
+    --good: #4cc48d; --good-soft: #143426;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f141c; --panel: #161d28; --ink: #e7ecf3; --muted: #93a0b2; --line: #263142; --hop: #1f2836;
+  --cobalt: #7d9cff; --cobalt-ink: #0f141c; --cobalt-soft: #1c2848; --amber: #f2b23f; --amber-soft: #3a2c10;
+  --good: #4cc48d; --good-soft: #143426;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { color-scheme: light; }
+:root { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+body {
+  margin: 0;
+  background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.5;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 28px 40px;
+}
+.wrap { max-width: 980px; margin: 0 auto; display: grid; gap: 20px; }
+.eyebrow { font-family: var(--font-mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+a { color: var(--cobalt); }
+button, .btn { font: 500 14px var(--font-body); cursor: pointer; }
+button:focus-visible, a:focus-visible { outline: 2px solid var(--cobalt); outline-offset: 2px; }
+
+header { display: grid; grid-template-columns: 1fr auto; gap: 14px 28px; align-items: end; }
+h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(26px, 5vw, 42px); line-height: 1.05; margin: 6px 0 0; text-wrap: balance; letter-spacing: -.01em; }
+.overall { text-align: right; }
+.overall .pct { font-family: var(--font-display); font-size: clamp(40px, 9vw, 68px); line-height: 1; color: var(--cobalt); font-variant-numeric: tabular-nums; }
+.overall .sub { color: var(--muted); font-size: 13px; }
+.meter { grid-column: 1 / -1; height: 10px; border-radius: 99px; background: var(--hop); overflow: hidden; }
+.meter i { display: block; height: 100%; width: 0; background: var(--cobalt); border-radius: 99px; transition: width .8s cubic-bezier(.2,.8,.2,1); }
+.status { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; font-size: 13px; color: var(--muted); }
+.status button { color: var(--cobalt); background: none; border: 1px solid var(--line); border-radius: 8px; padding: 4px 10px; font-size: 13px; }
+.dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--muted); margin-right: 6px; vertical-align: middle; }
+.dot.live { background: var(--good); }
+.dot.stale { background: var(--amber); }
+.status a { color: var(--cobalt); font-size: 13px; }
+.empty { background: var(--panel); border: 1px dashed var(--line); border-radius: 14px; padding: 24px 20px; display: grid; gap: 6px; }
+.empty b { font-size: 17px; }
+.empty span { color: var(--muted); }
+
+/* Launch pad */
+.pad { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; display: grid; }
+.pad-top { padding: 18px 20px 14px; display: grid; gap: 4px; border-bottom: 1px solid var(--line); }
+.pad-top .what { font-size: 20px; font-weight: 600; text-wrap: balance; }
+.pad-top .when { color: var(--muted); font-size: 14px; }
+.warm { padding: 16px 20px; display: grid; gap: 12px; background: var(--amber-soft); }
+.warm .label { display: flex; align-items: center; gap: 8px; font: 500 12px var(--font-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--amber); }
+.warm .text { max-width: 68ch; }
+.check { display: grid; gap: 8px; }
+.check .q { font-weight: 600; }
+.check .a { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; max-width: 68ch; }
+.reveal { justify-self: start; color: var(--amber); background: var(--panel); border: 1px solid var(--amber); border-radius: 8px; padding: 6px 12px; }
+.go { padding: 16px 20px 18px; display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; }
+.btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--cobalt); color: var(--cobalt-ink); text-decoration: none; border-radius: 10px; padding: 11px 18px; font-weight: 600; font-size: 15px; }
+.btn-primary[aria-disabled="true"] { opacity: .5; }
+.btn-link { color: var(--cobalt); font-size: 14px; }
+.go .hint { color: var(--muted); font-size: 13px; flex-basis: 100%; }
+
+/* Score strip */
+.score { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.stat { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; display: grid; gap: 2px; }
+.stat b { font: 700 26px var(--font-display); font-variant-numeric: tabular-nums; color: var(--ink); }
+.stat span { color: var(--muted); font-size: 13px; }
+.stat.hot b { color: var(--amber); }
+
+.lanes { display: grid; gap: 18px; }
+.lane { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 18px 18px 20px; display: grid; gap: 16px; }
+.lane-head { display: grid; grid-template-columns: auto 1fr auto; gap: 16px; align-items: center; }
+.ring { width: 72px; height: 72px; }
+.ring circle { fill: none; stroke-width: 8; }
+.ring .track { stroke: var(--hop); }
+.ring .fill { stroke: var(--cobalt); stroke-linecap: round; transition: stroke-dashoffset .9s cubic-bezier(.2,.8,.2,1); }
+.ring text { font: 600 16px var(--font-mono); fill: var(--ink); }
+.lane h2 { font-family: var(--font-display); font-weight: 500; font-size: 19px; margin: 0; }
+.lane .meta { color: var(--muted); font-size: 13px; }
+.badge { font: 500 12px var(--font-mono); padding: 4px 10px; border-radius: 99px; background: var(--hop); color: var(--muted); white-space: nowrap; }
+.badge.ok { background: var(--cobalt-soft); color: var(--cobalt); }
+.badge.warn { background: var(--amber-soft); color: var(--amber); }
+.badge.done { background: var(--good-soft); color: var(--good); }
+
+.route { list-style: none; margin: 0; padding: 4px 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(74px, 1fr)); gap: 14px 6px; }
+.hop { display: grid; justify-items: center; gap: 6px; position: relative; text-align: center; min-width: 0; }
+.hop::before { content: ""; position: absolute; top: 15px; left: -50%; width: 100%; height: 3px; background: var(--hop); z-index: 0; }
+.hop:first-child::before { display: none; }
+.hop.done::before, .hop.next-hop::before { background: var(--cobalt); }
+.node { width: 32px; height: 32px; border-radius: 50%; border: 3px solid var(--hop); background: var(--panel); display: grid; place-items: center; position: relative; z-index: 1; font: 500 12px var(--font-mono); color: var(--muted); transition: background .4s, border-color .4s, transform .4s; }
+.hop.done .node { background: var(--cobalt); border-color: var(--cobalt); color: var(--cobalt-ink); }
+.hop.next-hop .node { border-color: var(--amber); color: var(--amber); animation: pulse 2s ease-in-out infinite; }
+.hop.fresh .node { transform: scale(1.2); }
+.hop .code { font: 500 12px var(--font-mono); color: var(--ink); }
+.hop .name { font-size: 11px; color: var(--muted); line-height: 1.3; overflow-wrap: anywhere; }
+.hop .warmed { font: 500 10px var(--font-mono); color: var(--amber); }
+@keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 var(--amber-soft); } 50% { box-shadow: 0 0 0 7px var(--amber-soft); } }
+@media (prefers-reduced-motion: reduce) { .hop.next-hop .node { animation: none; } .meter i, .ring .fill, .node { transition: none; } }
+
+footer { color: var(--muted); font-size: 12px; }
+
+@media (max-width: 560px) {
+  header { grid-template-columns: 1fr; }
+  .overall { text-align: left; }
+  .score { gap: 8px; }
+  .stat { padding: 10px; }
+  .stat b { font-size: 22px; }
+  .route { grid-template-columns: 1fr; gap: 0; }
+  .hop { grid-template-columns: 32px 1fr; justify-items: start; text-align: left; gap: 2px 12px; padding-bottom: 12px; }
+  .hop::before { top: -50%; left: 14px; width: 3px; height: 100%; }
+  .hop .node { grid-row: span 3; }
+  .lane-head { grid-template-columns: auto 1fr; }
+  .lane-head .badge { grid-column: 1 / -1; justify-self: start; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <div class="eyebrow" id="classEyebrow">WGU Class Launchpad</div>
+      <h1 id="headline">Loading your class</h1>
+    </div>
+    <div class="overall">
+      <div class="pct" id="overallPct">0%</div>
+      <div class="sub" id="overallSub">Waiting for the latest sync</div>
+    </div>
+    <div class="meter" aria-hidden="true"><i id="overallBar"></i></div>
+    <div class="status">
+      <span id="source"><span class="dot"></span>Loading</span>
+      <span id="countdown"></span>
+      <a id="syncNow" href="https://github.com/kmagno94/wgu-classes/actions/workflows/sync.yml" target="_blank" rel="noopener">Sync now on GitHub</a>
+    </div>
+  </header>
+
+  <section class="empty" id="empty" hidden><b id="emptyTitle">No class data yet</b><span id="emptyText">The first sync from Notion has not run. It runs every 30 minutes, or press Sync now on GitHub.</span></section>
+
+  <section class="pad" id="pad" aria-labelledby="padWhat">
+    <div class="pad-top">
+      <div class="eyebrow" id="padEyebrow">Next hop</div>
+      <div class="what" id="padWhat"></div>
+      <div class="when" id="padWhen"></div>
+    </div>
+    <div class="warm" id="warm">
+      <div class="label">Imprint warmup · 2 minutes</div>
+      <div class="text" id="warmText"></div>
+      <div class="check">
+        <div class="q" id="warmQ"></div>
+        <button class="reveal" id="reveal" type="button">Answer it in your head, then reveal</button>
+        <div class="a" id="warmA" hidden></div>
+      </div>
+    </div>
+    <div class="go">
+      <a class="btn-primary" id="startBtn" href="#" target="_blank" rel="noopener">Start this hop <span aria-hidden="true">→</span></a>
+      <a class="btn-link" id="alsoBtn" href="#" target="_blank" rel="noopener"></a>
+      <span class="hint" id="goHint">Lab sessions: open in Chrome, commit and push before the 6 hour timer runs out.</span>
+    </div>
+  </section>
+
+  <section class="score" aria-label="Score">
+    <div class="stat"><b id="sHops">0</b><span>hops cleared</span></div>
+    <div class="stat" id="streakBox"><b id="sStreak">0</b><span>day streak</span></div>
+    <div class="stat"><b id="sWarm">0</b><span>warmups done</span></div>
+  </section>
+
+  <section class="lanes" id="lanes"></section>
+
+  <footer id="footer">Tick Reviewed on a step in Notion and this page catches up at the next sync, every 30 minutes from 7 AM to midnight. Streak counts days with a hop cleared or a warmup done. Warmups and streak are kept in this browser. <span id="otherClasses"></span></footer>
+</div>
+<script>
+(function () {
+  "use strict";
+  var $ = function (id) { return document.getElementById(id); };
+  var data = null, slug = null, warmed = {}, firstSeen = {}, lastDone = [];
+
+  function store(k, v) { try { if (v === undefined) { var s = localStorage.getItem(k); return s ? JSON.parse(s) : null; } localStorage.setItem(k, JSON.stringify(v)); } catch (e) { return null; } }
+  function todayISO() { var d = new Date(); return new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().slice(0, 10); }
+  function isoOf(d) { return new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().slice(0, 10); }
+  function daysUntil(iso) { var t = new Date(iso + "T00:00:00"); var n = new Date(); n.setHours(0, 0, 0, 0); return Math.round((t - n) / 86400000); }
+  function fmtDate(iso) { return new Date(iso + "T00:00:00").toLocaleDateString(undefined, { month: "short", day: "numeric" }); }
+  function ago(iso) {
+    var m = Math.round((Date.now() - new Date(iso).getTime()) / 60000);
+    if (m < 1) return "just now"; if (m < 60) return m + " min ago";
+    var h = Math.round(m / 60); if (h < 24) return h + (h === 1 ? " hour ago" : " hours ago");
+    return Math.round(h / 24) + " days ago";
+  }
+  function shortCode(step) {
+    var s = step.toLowerCase();
+    if (s.indexOf("day-one") === 0) return "Go";
+    if (s.indexOf("branch made") > -1) return "Br";
+    if (s.indexOf("deliverables") > -1) return "Pk";
+    if (s.indexOf("submitted") > -1) return "Sub";
+    if (s.indexOf("tested") === 0) return "Test";
+    var m = step.match(/^([A-Z]\d?(?: to [A-Z]\d)?)\s*:/);
+    return m ? m[1].replace(" to ", "-") : step.slice(0, 3);
+  }
+  function shortName(step) { var i = step.indexOf(":"); return i > -1 ? step.slice(i + 1).trim() : step; }
+  function linkLabel(url) {
+    if (!url) return "";
+    if (url.indexOf("lrps.wgu.edu") > -1) return "Open the lab";
+    if (url.indexOf("panopto") > -1) return "Watch the video";
+    if (url.indexOf("notion.com") > -1) return "Open the task page";
+    if (url.indexOf("cm.wgu.edu") > -1) return "Open the GitLab guide";
+    if (url.indexOf("my.wgu.edu") > -1) return "Open the course page";
+    return "Open link";
+  }
+  function coach(pct) {
+    if (pct >= 100) return "Every hop cleared. The class is in.";
+    if (pct === 0) return "First packet out. Warm up, then clear this one hop.";
+    if (pct < 25) return "The route is open. Keep the commits coming.";
+    if (pct < 50) return "Past the first stretch.";
+    if (pct < 75) return "More than halfway down the line.";
+    return "Final hops. Screenshots, deliverables, submit.";
+  }
+  function streak(steps) {
+    var days = {};
+    Object.keys(warmed).forEach(function (k) { days[warmed[k]] = 1; });
+    steps.forEach(function (s) { if (s.done) { var d = s.completed || firstSeen[s.order]; if (d) days[d] = 1; } });
+    var n = 0, d = new Date(); d.setHours(12);
+    if (!days[isoOf(d)]) d.setDate(d.getDate() - 1);
+    while (days[isoOf(d)]) { n++; d.setDate(d.getDate() - 1); }
+    return n;
+  }
+
+  function renderPad(next, pct) {
+    $("pad").hidden = false;
+    if (!next) {
+      $("padEyebrow").textContent = "Route complete";
+      $("padWhat").textContent = "Every hop cleared";
+      $("padWhen").textContent = "";
+      $("warm").hidden = true; $("startBtn").hidden = true; $("alsoBtn").hidden = true; $("goHint").hidden = true;
+      return;
+    }
+    var t = data.tasks.filter(function (t) { return t.id === next.task; })[0];
+    $("padEyebrow").textContent = "Next hop · " + (t ? t.name + " · " : "") + shortCode(next.step);
+    $("padWhat").textContent = next.step;
+    var du = next.due ? daysUntil(next.due) : null;
+    $("padWhen").textContent = (next.due ? "Due " + fmtDate(next.due) + " (" + (du > 0 ? du + " days" : du === 0 ? "today" : -du + " days overdue") + "). " : "") + coach(pct);
+    $("warm").hidden = !next.warmup;
+    $("warmText").textContent = next.warmup || "";
+    $("warmQ").textContent = next.check ? "Check: " + next.check : "";
+    $("warmA").textContent = next.answer || "";
+    var seen = !!warmed[next.order];
+    $("warmA").hidden = !seen;
+    $("reveal").hidden = seen || !next.answer;
+    $("startBtn").hidden = !next.go; if (next.go) $("startBtn").href = next.go;
+    $("alsoBtn").hidden = !next.also; if (next.also) { $("alsoBtn").href = next.also; $("alsoBtn").textContent = linkLabel(next.also); }
+    $("goHint").hidden = (String(next.go) + String(next.also)).indexOf("lrps.wgu.edu") === -1;
+    $("reveal").onclick = function () {
+      warmed[next.order] = todayISO(); store(slug + ":warmed", warmed);
+      $("warmA").hidden = false; $("reveal").hidden = true;
+      renderScore(); renderLanes(next);
+    };
+  }
+  function renderScore() {
+    var steps = data.steps, done = steps.filter(function (s) { return s.done; }).length;
+    $("sHops").textContent = done + "/" + steps.length;
+    var st = streak(steps);
+    $("sStreak").textContent = st;
+    $("streakBox").classList.toggle("hot", st >= 3);
+    $("sWarm").textContent = Object.keys(warmed).length;
+  }
+  function renderLanes(next) {
+    var lanes = $("lanes"); lanes.textContent = "";
+    data.tasks.forEach(function (task) {
+      var ts = data.steps.filter(function (s) { return s.task === task.id; });
+      var td = ts.filter(function (s) { return s.done; }).length;
+      var tp = ts.length ? Math.round(td / ts.length * 100) : 0;
+      var left = daysUntil(task.target);
+      var submitted = ts.length && ts[ts.length - 1].done;
+      var badge = '<span class="badge ok">' + left + " days to " + fmtDate(task.target) + "</span>";
+      if (submitted) badge = '<span class="badge done">Submitted</span>';
+      else if (left < 0) badge = '<span class="badge warn">' + -left + " days past " + fmtDate(task.target) + "</span>";
+      else if (left <= 3) badge = '<span class="badge warn">' + left + " days to " + fmtDate(task.target) + "</span>";
+      var C = 2 * Math.PI * 30;
+      var lane = document.createElement("article");
+      lane.className = "lane";
+      lane.innerHTML = '<div class="lane-head">' +
+        '<svg class="ring" viewBox="0 0 72 72" role="img" aria-label="' + task.name + " " + tp + ' percent">' +
+        '<circle class="track" cx="36" cy="36" r="30"></circle>' +
+        '<circle class="fill" cx="36" cy="36" r="30" stroke-dasharray="' + C + '" stroke-dashoffset="' + C + '" transform="rotate(-90 36 36)"></circle>' +
+        '<text x="36" y="41" text-anchor="middle">' + tp + "%</text></svg>" +
+        '<div><h2></h2><div class="meta">' + td + " of " + ts.length + " hops · target " + fmtDate(task.target) + "</div></div>" + badge +
+        '</div><ol class="route"></ol>';
+      lane.querySelector("h2").textContent = task.name + ": " + task.title;
+      var ol = lane.querySelector(".route");
+      ts.forEach(function (s) {
+        var li = document.createElement("li");
+        var isNext = next && next.order === s.order;
+        li.className = "hop" + (s.done ? " done" : "") + (isNext ? " next-hop" : "");
+        if (s.done && lastDone.indexOf(s.order) === -1) li.classList.add("fresh");
+        li.innerHTML = '<span class="node">' + (s.done ? "✓" : "") + '</span><span class="code"></span><span class="name"></span>';
+        li.querySelector(".code").textContent = shortCode(s.step);
+        li.querySelector(".name").textContent = shortName(s.step);
+        if (warmed[s.order] && !s.done) { var w = document.createElement("span"); w.className = "warmed"; w.textContent = "warmed up"; li.appendChild(w); }
+        li.title = s.step + (s.due ? " (due " + fmtDate(s.due) + ")" : "");
+        ol.appendChild(li);
+      });
+      lanes.appendChild(lane);
+      requestAnimationFrame(function () { lane.querySelector(".fill").style.strokeDashoffset = C * (1 - tp / 100); });
+    });
+    setTimeout(function () { var f = document.querySelectorAll(".hop.fresh"); for (var i = 0; i < f.length; i++) f[i].classList.remove("fresh"); }, 900);
+  }
+  function render() {
+    var steps = data.steps.slice().sort(function (a, b) { return a.order - b.order; });
+    data.steps = steps;
+    document.title = data.code + " Launchpad";
+    $("classEyebrow").textContent = data.code + " · " + data.name;
+    $("headline").textContent = "Route the packet to " + fmtDate(data.finalTarget);
+    var done = steps.filter(function (s) { return s.done; }).length;
+    var pct = steps.length ? Math.round(done / steps.length * 100) : 0;
+    $("overallPct").textContent = pct + "%";
+    $("overallSub").textContent = done + " of " + steps.length + " hops cleared";
+    $("overallBar").style.width = pct + "%";
+    var mins = (Date.now() - new Date(data.syncedAt).getTime()) / 60000;
+    $("source").innerHTML = '<span class="dot ' + (mins < 90 ? "live" : "stale") + '"></span>';
+    $("source").appendChild(document.createTextNode("Synced from Notion " + ago(data.syncedAt)));
+    var d = daysUntil(data.finalTarget);
+    $("countdown").textContent = d > 0 ? d + " days to the " + fmtDate(data.finalTarget) + " target" : d === 0 ? "Target day" : -d + " days past the target";
+    steps.forEach(function (s) { if (s.done && !firstSeen[s.order]) firstSeen[s.order] = todayISO(); });
+    store(slug + ":firstseen", firstSeen);
+    var next = steps.filter(function (s) { return !s.done; })[0];
+    $("empty").hidden = true;
+    renderPad(next, pct);
+    renderScore();
+    renderLanes(next);
+    lastDone = steps.filter(function (s) { return s.done; }).map(function (s) { return s.order; });
+    store(slug + ":done", lastDone);
+  }
+  function showEmpty(title, text) {
+    $("empty").hidden = false; $("pad").hidden = true;
+    $("emptyTitle").textContent = title; $("emptyText").textContent = text;
+    $("source").innerHTML = '<span class="dot stale"></span>';
+    $("source").appendChild(document.createTextNode("Not synced yet"));
+  }
+  function getJSON(url) {
+    return fetch(url + (url.indexOf("?") > -1 ? "&" : "?") + "t=" + Date.now(), { cache: "no-store" })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); });
+  }
+  function load() {
+    getJSON("data/classes.json").then(function (idx) {
+      var list = idx.classes || [];
+      var want = (location.hash || "").replace("#", "").toLowerCase();
+      var pick = list.filter(function (c) { return c.slug === want; })[0] || list.filter(function (c) { return c.active; })[0] || list[0];
+      var others = list.filter(function (c) { return pick && c.slug !== pick.slug; });
+      $("otherClasses").innerHTML = others.length ? "Other classes: " : "";
+      others.forEach(function (c, i) { var a = document.createElement("a"); a.href = "#" + c.slug; a.textContent = c.code; $("otherClasses").appendChild(a); if (i < others.length - 1) $("otherClasses").appendChild(document.createTextNode(", ")); });
+      if (!pick) { showEmpty("No classes yet", "Add a class settings file in the classes folder of the repo."); return; }
+      slug = pick.slug;
+      warmed = store(slug + ":warmed") || {};
+      firstSeen = store(slug + ":firstseen") || {};
+      lastDone = store(slug + ":done") || [];
+      return getJSON("data/" + slug + ".json").then(function (d) { data = d; render(); });
+    }).catch(function () {
+      showEmpty("No class data yet", "The first sync from Notion has not run. It runs every 30 minutes, or press Sync now on GitHub.");
+    });
+  }
+  window.addEventListener("hashchange", load);
+  window.addEventListener("pageshow", function (e) { if (e.persisted) load(); });
+  document.addEventListener("visibilitychange", function () { if (document.visibilityState === "visible" && data) load(); });
+  load();
+})();
+</script>
+</body>
+</html>
