@@ -83,9 +83,15 @@ function toStep(page, cls) {
   };
 }
 
+// Prints the message as a GitHub Actions error so it shows in the run summary.
+function fail(msg) {
+  console.error(msg);
+  if (process.env.GITHUB_ACTIONS) console.log(`::error title=Notion sync::${msg.replace(/\r?\n/g, " ")}`);
+}
+
 async function main() {
   if (!TOKEN && !MOCK) {
-    console.error("NOTION_TOKEN is not set. Add it under Settings, Secrets and variables, Actions.");
+    fail("NOTION_TOKEN is not set. Add it under Settings, Secrets and variables, Actions, New repository secret.");
     process.exit(1);
   }
   await mkdir(OUT_DIR, { recursive: true });
@@ -112,9 +118,10 @@ async function main() {
       console.log(`${cls.code}: ${steps.length} steps, ${steps.filter((s) => s.done).length} done`);
     } catch (e) {
       failures++;
-      console.error(`${cls.code}: ${e.message}`);
-      if (e.status === 404) console.error("  Connect the integration to the class page in Notion: ••• menu, Connections.");
-      if (e.status === 401) console.error("  The NOTION_TOKEN secret is wrong or was revoked.");
+      let hint = "";
+      if (e.status === 404) hint = " Fix: open the class page in Notion, ••• menu, Connections, add Class Launchpad.";
+      if (e.status === 401) hint = " Fix: the NOTION_TOKEN secret is wrong or was revoked. Copy the token again and replace the secret.";
+      fail(`${cls.code}: ${e.message}.${hint}`);
     }
   }
   await writeFile(path.join(OUT_DIR, "classes.json"), JSON.stringify({ classes: index }, null, 1));
